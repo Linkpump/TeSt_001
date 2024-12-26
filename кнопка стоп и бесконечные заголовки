@@ -1,0 +1,23 @@
+note = {}
+username = input("введите имя пользователя: ")
+title=[]
+book = True
+while book:
+    title.append(input("введите заголовок заметки: "))
+    if (input("хотите ввести еще один заголовок (да\нет): " )) == "нет":
+        break
+    else:
+        print("заголовок сохранен")
+        note[book] = title
+content = input("введите описание заметки: ")
+status = input("введите статус заметки: ")
+created_date = input("Дата создания заметки (пример: 10.11.2024): ")
+issue_date = input("дата истечения заметки (пример: 10.11.2024): ")
+note["имя пользователя"] = username
+note["заголовок заметки"] = title
+note["описание заметки"] = content
+note["описание заметки"] = status
+note["дата создания заметки"] = created_date[:5]
+note["дата истечения заметки"] = issue_date[:5]
+for key, value in note.items():
+    print(f'\n{key}: {value}')
